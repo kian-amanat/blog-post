@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
 
+export const revalidate = 0; // always fetch latest data
+
 export default async function Page() {
-  // مسیر فایل JSON
   const filePath = path.join(process.cwd(), "blog.json");
   const blogData = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
